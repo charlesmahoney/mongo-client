@@ -1,3 +1,7 @@
-FROM quay.io/quay/busybox:latest
+FROM registry.access.redhat.com/ubi9:9.2-722
+
+RUN curl https://github.com//mongodb/mongocli/releases/download/v1.19.0/mongocli_1.19.0_linux_x86_64.tar.gz -o mongocli.tar.gz
+
+
 
 ENTRYPOINT ["tail", "-f", "/dev/null"]
